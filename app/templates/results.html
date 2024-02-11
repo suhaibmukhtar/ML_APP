@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Results</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Task Results</h1>
+
+    <h2>Clustering Results</h2>
+    <p>Number of Clusters: {{ clusters }}</p>
+    <p>Silhouette Score: {{ score }}</p>
+
+    <h2>Logistic Regression Results</h2>
+    <p>Training Score: {{ training_score }}</p>
+    <p>Predicted Labels: {{ y_pred_labels }}</p>
+
+    <h2>Duration and Pick & Place Results</h2>
+    <p>Duration DataFrame: {{ df_duration }}</p>
+    <p>Pick & Place DataFrame: {{ df_pick_and_place }}</p>
+</body>
+</html>
