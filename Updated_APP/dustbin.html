@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Results</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .result-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .result-section h2 {
+            margin-top: 0;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Results</h1>
+
+        <div class="result-section">
+            <h2>Clustering Results</h2>
+            <div class="result-item">Number of Clusters: {{ clusters }}</div>
+            <div class="result-item">Silhouette Score: {{ score }}</div>
+        </div>
+
+        <div class="result-section">
+            <h2>Logistic Regression Results</h2>
+            <div class="result-item">Training Score: {{ training_score }}</div>
+            <div class="result-item">Predicted Labels: {{ y_pred_labels }}</div>
+        </div>
+
+        <div class="result-section">
+            <h2>Duration and Pick & Place Results</h2>
+            <div class="result-item">Duration DataFrame: {{ df_duration }}</div>
+            <div class="result-item">Pick & Place DataFrame: {{ df_pick_and_place }}</div>
+        </div>
+    </div>
+</body>
+</html>
